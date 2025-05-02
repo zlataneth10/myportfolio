@@ -1,0 +1,449 @@
+* {  
+    margin: 0;  
+    padding: 0;  
+    font-family: sans-serif;  
+    box-sizing: border-box;  
+  }  
+  html{
+    scroll-behavior: smooth;
+  }
+    
+  body {  
+    background: black;  
+    color: #fff;  
+  }  
+    
+
+  .container{
+    padding: 10px 10px;
+  }
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+  }
+  .logo{
+    width: 240px;
+    height: 240px;
+  }
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+  }
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+} 
+.background-image {  
+    display: flex; /* Use flexbox to center the image */  
+    justify-content: flex-end; /* Center horizontally */  
+    align-items: center; /* Center vertically */  
+    
+    
+}  
+.background-image img {  
+    width: 35%; /* Adjust this value to control the size of the image */ 
+    border-radius: 15px; 
+    }
+    nav ul li a:hover{
+        transition: 0.5s;
+        color: red;
+ }
+ .header-text{
+    margin-top: 20px;
+    font-size: 30px;
+ }
+ .header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+ }
+ span{
+    color: red;
+ }
+ #about{
+    padding: 80px 0px;
+    color: #ababab;
+ }
+ .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
+.about-col-1{
+    flex-basis: 35%;
+    display: flex; /* Use flexbox to center the image */  
+    justify-content: center; /* Center horizontally */  
+    align-items: center; /* Center vertically */  
+}
+.about-col-1 img{
+    width: 60%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.subtitle{
+    color: aliceblue;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+width: 50px;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+   color: #8f0d0dd4; 
+   font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+#services{
+    padding: 10px 0;
+    
+}
+.services-list {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Corrected from 'ifr' to '1fr' */  
+    grid-gap: 40px;  
+    margin-top: 50px;  
+    
+}  
+
+.services-list div {
+    background: gray;
+    padding: 20px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5ms;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+#portfolio {  
+    padding: 50px; /* Maintain the original padding */  
+}  
+
+.work-list {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Keep this for responsive design */  
+    grid-gap: 40px;  
+    margin-top: 50px;  
+}  
+
+.work {  
+    border-radius: 10px; /* Define the border radius for the items */  
+    position: relative;  
+    overflow: hidden; /* This is good for image containment */  
+}  
+
+.work img {  
+    width: 100%; /* Changed to 100% for full width */  
+    border-radius: 10px; /* Maintain radius for images */  
+    display: block; /* Ensures the image behaves correctly block-wise */  
+}  
+.work {  
+    position: relative; /* Important for position of the layer */  
+    overflow: hidden; /* Keep content within the boundaries of the work item */  
+    transition: transform 0.5s;
+}  
+
+.layer {  
+    position: absolute; /* Position the layer absolutely within the .work div */  
+    top: 0; /* Align to the top */  
+    left: 0; /* Align to the left */  
+    right: 0; /* Stretch to the right */  
+    bottom: 0; /* Stretch to the bottom */  
+    background-color:rgba(138, 16, 16, 0.6); /* Semi-transparent background */  
+    color: white; /* Text color */  
+    display: flex; /* Use flexbox for centering content */  
+    flex-direction: column; /* Align children vertically */  
+    justify-content: center; /* Center vertically */  
+    align-items: center; /* Center horizontally */  
+    opacity: 0; /* Initially hidden */  
+    transition: opacity 0.5s; /* Smooth transition for hover effect */  
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}  
+
+.work:hover .layer {  
+    opacity: 1; /* Show overlay on hover */  
+}  
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover{
+height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid white;
+    border-radius: 18px;
+    color: white;
+    padding: 14px 18px;
+    text-decoration: none;
+    transition: (background 0.5s);
+}
+.btn:hover{
+    background: #ff004f;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(0.5s);
+}
+.btn-btn2{
+    display: inline-block;
+    background: #ff004f;
+    text-decoration: none;
+    font-size: large;
+    color: #fff;
+}
+.contact-left form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border:1px solid white;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 6px;
+}
+form .btn-btn2{
+   padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* Base styles are above; now add this for responsiveness */
+
+@media only screen and (max-width: 768px) {
+    /* Reduce logo size or position changes if needed */
+    .logo {
+      width: 150px;
+      height: 150px;
+    }
+  
+    /* Adjust nav layout for smaller screens (stack or hamburger menu) */
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    /* Make nav links stack vertically and larger for touch targets */
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    /* Optional: show hamburger menu icons if you have any */
+    .fa-bars {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  
+    /* Hide the navigation links initially if you implement a toggle menu */
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    /* Show menu when active (you will need JS to toggle a class) */
+    nav ul.active {
+      display: flex;
+    }
+  
+    /* Adjust background image container to full width */
+    .background-image {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .background-image img {
+      width: 80%; /* Make image smaller and more mobile-friendly */
+    }
+  
+    /* Header text adjustments for small screens */
+    .header-text {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+    .header-text h1 {
+      font-size: 40px;
+    }
+  
+    /* About section - stack columns vertically */
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .about-col-1, .about-col-2 {
+      flex-basis: 100%;
+      width: 100%;
+    }
+    .about-col-1 img {
+      width: 80%;
+    }
+  
+    /* Tabs - make more touch-friendly */
+    .tab-titles {
+      flex-direction: column;
+    }
+    .tab-links {
+      margin: 10px 0;
+    }
+  
+    /* Services and portfolio grid adjustments are already responsive, but ensure they look good */
+    .services-list, .work-list {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  
+    /* Other text elements */
+    .subtitle {
+      font-size: 16px;
+    }
+  
+    /* Smaller font sizes on mobile */
+    .layer h3 {
+      font-size: 16px;
+    }
+  
+    /* Buttons */
+    .btn {
+      width: 80%;
+      padding: 12px 16px;
+    }
+  
+    /* Contact form inputs */
+    form input, form textarea {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    /* Adjust social icons */
+    .social-icons a {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+  
+    /* Show mobile menu icons if using a menu toggle */
+    
+  
+    /* Hide hamburger icon again for larger screens if you toggle menu */
+  }
+  
+  /* Optional: Styles for larger screens (above 768px) if needed */
+  @media only screen and (min-width: 769px) {
+    /* Ensure hamburger icons are hidden on larger screens */
+    .fa-bars, .fa-circle-xmark {
+      display: none;
+    }
+  }
+  #msg{
+    color: green;
+    margin-bottom: 1x;
+    display: block;
+  }
